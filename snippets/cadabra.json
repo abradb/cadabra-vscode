@@ -1,0 +1,142 @@
+{
+  "db block": {
+    "prefix": "db",
+    "description": "Database connection block",
+    "body": [
+      "db \"${1:postgres}\" {",
+      "  host     = \"${2:localhost}\"",
+      "  port     = ${3:5432}",
+      "  user     = \"${4:postgres}\"",
+      "  password = env(\"${5:DB_PASSWORD}\")",
+      "  name     = \"${6:myapp}\"",
+      "}"
+    ]
+  },
+  "table block": {
+    "prefix": "table",
+    "description": "Table definition",
+    "body": [
+      "table \"${1:name}\" {",
+      "  schema = \"${2:public}\"",
+      "",
+      "  column \"${3:id}\" {",
+      "    type        = serial",
+      "    primary_key = true",
+      "  }",
+      "",
+      "  $0",
+      "}"
+    ]
+  },
+  "column block": {
+    "prefix": "column",
+    "description": "Column definition",
+    "body": [
+      "column \"${1:name}\" {",
+      "  type     = ${2:text}",
+      "  not_null = ${3:true}",
+      "}"
+    ]
+  },
+  "column with varchar": {
+    "prefix": "columnv",
+    "description": "Column with varchar type",
+    "body": [
+      "column \"${1:name}\" {",
+      "  type     = \"varchar(${2:255})\"",
+      "  not_null = ${3:true}",
+      "}"
+    ]
+  },
+  "column with comment": {
+    "prefix": "columnc",
+    "description": "Column with comment",
+    "body": [
+      "column \"${1:name}\" {",
+      "  type     = ${2:text}",
+      "  not_null = ${3:true}",
+      "  comment  = \"${4:description}\"",
+      "}"
+    ]
+  },
+  "column id serial": {
+    "prefix": "id",
+    "description": "Serial primary key column",
+    "body": [
+      "column \"id\" {",
+      "  type        = serial",
+      "  primary_key = true",
+      "}"
+    ]
+  },
+  "column id bigint identity": {
+    "prefix": "idbig",
+    "description": "Bigint identity primary key column",
+    "body": [
+      "column \"id\" {",
+      "  type      = bigint",
+      "  generated = \"always\"",
+      "}"
+    ]
+  },
+  "column created_at": {
+    "prefix": "created",
+    "description": "Created at timestamp column",
+    "body": [
+      "column \"created_at\" {",
+      "  type    = timestamp",
+      "  default = \"now()\"",
+      "}"
+    ]
+  },
+  "column updated_at": {
+    "prefix": "updated",
+    "description": "Updated at timestamp column",
+    "body": [
+      "column \"updated_at\" {",
+      "  type    = timestamp",
+      "  default = \"now()\"",
+      "}"
+    ]
+  },
+  "index block": {
+    "prefix": "index",
+    "description": "Index definition",
+    "body": [
+      "index \"${1:idx_table_column}\" {",
+      "  columns = [\"${2:column}\"]",
+      "  unique  = ${3:false}",
+      "}"
+    ]
+  },
+  "foreign_key block": {
+    "prefix": "fk",
+    "description": "Foreign key constraint",
+    "body": [
+      "foreign_key \"${1:fk_table_ref}\" {",
+      "  columns     = [\"${2:column_id}\"]",
+      "  references  = \"${3:table}\"",
+      "  ref_columns = [\"${4:id}\"]",
+      "  on_delete   = \"${5:cascade}\"",
+      "}"
+    ]
+  },
+  "enum block": {
+    "prefix": "enum",
+    "description": "Enum type definition",
+    "body": [
+      "enum \"${1:name}\" {",
+      "  values = [\"${2:value1}\", \"${3:value2}\"]",
+      "}"
+    ]
+  },
+  "check block": {
+    "prefix": "check",
+    "description": "Check constraint",
+    "body": [
+      "check \"${1:name}\" {",
+      "  expr = \"${2:column > 0}\"",
+      "}"
+    ]
+  }
+}

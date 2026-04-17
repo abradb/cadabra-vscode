@@ -1,0 +1,190 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Cadabra",
+  "scopeName": "source.cadabra",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#block" },
+    { "include": "#expressions" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.cadabra",
+          "match": "#.*$"
+        },
+        {
+          "name": "comment.line.double-slash.cadabra",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.cadabra",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "block": {
+      "patterns": [
+        {
+          "comment": "Cadabra block types with labels",
+          "begin": "\\b(db|table|column|index|foreign_key|enum|check|view|materialized_view|function|procedure|trigger|sequence|extension|seed|row)\\b\\s*(\"[^\"]*\")?\\s*\\{",
+          "beginCaptures": {
+            "1": { "name": "entity.name.type.cadabra" },
+            "2": { "name": "entity.name.tag.cadabra" }
+          },
+          "end": "\\}",
+          "patterns": [
+            { "include": "#comments" },
+            { "include": "#block" },
+            { "include": "#attribute" },
+            { "include": "#expressions" }
+          ]
+        }
+      ]
+    },
+    "attribute": {
+      "patterns": [
+        {
+          "comment": "Attribute assignment",
+          "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(=)",
+          "captures": {
+            "1": { "name": "variable.other.property.cadabra" },
+            "2": { "name": "keyword.operator.assignment.cadabra" }
+          }
+        }
+      ]
+    },
+    "expressions": {
+      "patterns": [
+        { "include": "#strings" },
+        { "include": "#heredoc" },
+        { "include": "#numbers" },
+        { "include": "#type-keywords" },
+        { "include": "#boolean" },
+        { "include": "#functions" },
+        { "include": "#operators" },
+        { "include": "#brackets" }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.cadabra",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.cadabra",
+              "match": "\\\\[nrt\"\\\\]"
+            },
+            {
+              "comment": "String interpolation",
+              "name": "meta.interpolation.cadabra",
+              "begin": "\\$\\{",
+              "end": "\\}",
+              "beginCaptures": {
+                "0": { "name": "punctuation.section.interpolation.begin.cadabra" }
+              },
+              "endCaptures": {
+                "0": { "name": "punctuation.section.interpolation.end.cadabra" }
+              },
+              "patterns": [
+                { "include": "#expressions" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "heredoc": {
+      "patterns": [
+        {
+          "name": "string.unquoted.heredoc.cadabra",
+          "begin": "<<-?\\s*(\\w+)\\s*$",
+          "end": "^\\s*\\1\\s*$",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.string.begin.cadabra" }
+          },
+          "endCaptures": {
+            "0": { "name": "punctuation.definition.string.end.cadabra" }
+          }
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.cadabra",
+          "match": "\\b[0-9]+(\\.[0-9]+)?\\b"
+        }
+      ]
+    },
+    "type-keywords": {
+      "patterns": [
+        {
+          "comment": "Generic database type keywords",
+          "name": "support.type.cadabra",
+          "match": "\\b(serial|bigserial|integer|int|bigint|smallint|text|varchar|char|boolean|bool|float|double|numeric|decimal|timestamp|timestamptz|date|time|uuid|json|jsonb|bytea|blob)\\b"
+        }
+      ]
+    },
+    "boolean": {
+      "patterns": [
+        {
+          "name": "constant.language.boolean.cadabra",
+          "match": "\\b(true|false)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "comment": "Built-in cadabra functions",
+          "match": "\\b(env|native|now)\\s*(\\()",
+          "captures": {
+            "1": { "name": "support.function.builtin.cadabra" },
+            "2": { "name": "punctuation.definition.parameters.begin.cadabra" }
+          }
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.cadabra",
+          "match": "(==|!=|<=|>=|<|>|&&|\\|\\||!)"
+        }
+      ]
+    },
+    "brackets": {
+      "patterns": [
+        {
+          "name": "punctuation.section.braces.begin.cadabra",
+          "match": "\\{"
+        },
+        {
+          "name": "punctuation.section.braces.end.cadabra",
+          "match": "\\}"
+        },
+        {
+          "name": "punctuation.section.brackets.begin.cadabra",
+          "match": "\\["
+        },
+        {
+          "name": "punctuation.section.brackets.end.cadabra",
+          "match": "\\]"
+        },
+        {
+          "name": "punctuation.section.parens.begin.cadabra",
+          "match": "\\("
+        },
+        {
+          "name": "punctuation.section.parens.end.cadabra",
+          "match": "\\)"
+        }
+      ]
+    }
+  }
+}

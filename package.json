@@ -1,0 +1,59 @@
+{
+  "name": "cadabra-vscode",
+  "displayName": "Cadabra",
+  "description": "Language support for Cadabra database schema files (.cadabra)",
+  "version": "0.1.0",
+  "publisher": "cadabra",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abradb/cadabra-vscode"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "cadabra",
+    "database",
+    "schema",
+    "migration",
+    "hcl",
+    "postgresql",
+    "mysql"
+  ],
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "cadabra",
+        "aliases": [
+          "Cadabra",
+          "cadabra"
+        ],
+        "extensions": [
+          ".cadabra"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/cadabra-icon-light.svg",
+          "dark": "./icons/cadabra-icon-dark.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "cadabra",
+        "scopeName": "source.cadabra",
+        "path": "./syntaxes/cadabra.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "cadabra",
+        "path": "./snippets/cadabra.json"
+      }
+    ]
+  }
+}

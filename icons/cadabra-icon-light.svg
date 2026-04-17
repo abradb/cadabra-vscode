@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+  <!-- Database cylinder -->
+  <ellipse cx="8" cy="4" rx="5.5" ry="2.2" fill="none" stroke="#6B21A8" stroke-width="1.2"/>
+  <path d="M2.5 4v8c0 1.21 2.46 2.2 5.5 2.2s5.5-.99 5.5-2.2V4" fill="none" stroke="#6B21A8" stroke-width="1.2"/>
+  <path d="M2.5 8c0 1.21 2.46 2.2 5.5 2.2s5.5-.99 5.5-2.2" fill="none" stroke="#6B21A8" stroke-width="1.2" opacity="0.5"/>
+  <!-- Sparkle -->
+  <path d="M13 1l.5 1.5L15 3l-1.5.5L13 5l-.5-1.5L11 3l1.5-.5Z" fill="#A855F7"/>
+</svg>
