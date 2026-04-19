@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/abradb/cadabra-vscode/compare/v1.0.0...v1.0.1) (2026-04-19)
+
+
+### Bug Fixes
+
+* correct publisher id to abradb ([97c7c1d](https://github.com/abradb/cadabra-vscode/commit/97c7c1d873bd9da33dfdf66c75d00c9433ea2cd4))
+
 ## 1.0.0 (2026-04-19)
 
 
