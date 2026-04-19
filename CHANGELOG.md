@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/abradb/cadabra-vscode/compare/v1.0.1...v1.0.2) (2026-04-19)
+
+
+### Bug Fixes
+
+* add logo to ext ([5df5c39](https://github.com/abradb/cadabra-vscode/commit/5df5c39ae5af29ab03f1889768baa8784c211095))
+
 ## [1.0.1](https://github.com/abradb/cadabra-vscode/compare/v1.0.0...v1.0.1) (2026-04-19)
 
 

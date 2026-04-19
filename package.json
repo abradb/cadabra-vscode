@@ -2,7 +2,7 @@
   "name": "cadabra-vscode",
   "displayName": "Cadabra",
   "description": "Language support for Cadabra database schema files (.cadabra)",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "abradb",
   "license": "MIT",
   "repository": {
