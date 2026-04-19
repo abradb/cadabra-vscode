@@ -1,8 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-  <!-- Database cylinder -->
-  <ellipse cx="8" cy="4" rx="5.5" ry="2.2" fill="none" stroke="#C084FC" stroke-width="1.2"/>
-  <path d="M2.5 4v8c0 1.21 2.46 2.2 5.5 2.2s5.5-.99 5.5-2.2V4" fill="none" stroke="#C084FC" stroke-width="1.2"/>
-  <path d="M2.5 8c0 1.21 2.46 2.2 5.5 2.2s5.5-.99 5.5-2.2" fill="none" stroke="#C084FC" stroke-width="1.2" opacity="0.5"/>
-  <!-- Sparkle -->
-  <path d="M13 1l.5 1.5L15 3l-1.5.5L13 5l-.5-1.5L11 3l1.5-.5Z" fill="#E9D5FF"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="260px" height="306px" viewBox="0 0 260 306" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>cadabra-icon-dark</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cadabra-icon-dark" transform="translate(12.2259, 17.3682)">
+            <g id="rabbit" transform="translate(-9.2259, -16.3682)">
+                <path d="M84.1336797,134.990392 L57.6772615,139.576667 C-11.5324679,152.217212 -11.5324679,202.576667 127.01916,202.576667 C265.570789,202.576667 265.570789,152.217212 198.398428,139.576667 L171.767312,134.990392" id="Path" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"></path>
+                <path d="M49.18651,195.518677 L49.18651,267.891807 C54.9630684,281.208824 80.9008984,287.867333 127,287.867333 C173.099102,287.867333 199.279413,281.208824 205.540935,267.891807 L205.540935,195.518677" id="Path" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"></path>
+                <polygon id="Path-2" fill="#FFFFFF" points="68.7850001 170.9408 84.1336797 134.990392 60.6488282 82.2372721 58.7308976 42.4157021 68.7850001 16.3681517 88.9504961 21.4692312 111.303013 64.7557742 120.805889 115.296702 136.730898 115.296702 144.118516 66.8622786 166.950496 21.4692312 182.799734 16.3681517 197.170095 36.1664545 193.793374 82.2372721 171.767312 134.990392 186.083465 169.76061 127.950496 176.221651"></polygon>
+                <path d="M58.7308976,169.76061 C72.8566993,174.067971 95.6133417,176.221651 127.000824,176.221651 C158.388307,176.221651 181.778064,174.067971 197.170095,169.76061" id="Path" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"></path>
+                <path d="M52.9504961,233.99113 C68.2559176,239.324464 92.9129253,241.99113 126.921519,241.99113 C160.930113,241.99113 186.273105,239.324464 202.950496,233.99113" id="Path" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"></path>
+                <path d="M147.817527,169.76061 C147.817527,162.055779 152.589578,150.465706 162.13368,134.990392 C136.163341,97.5228159 127.868336,27.4038249 147.817527,17.583781 C167.766717,7.76373711 197.170095,58.8673563 197.170095,119.307865" id="Path" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" transform="translate(166.9505, 93.0644) scale(-1, 1) translate(-166.9505, -93.0644)"></path>
+                <path d="M69.8175267,169.76061 C69.8175267,162.055779 74.5895777,150.465706 84.1336797,134.990392 C58.1633411,97.5228159 49.8683364,27.4038249 69.8175267,17.583781 C89.766717,7.76373711 119.170095,58.8673563 119.170095,119.307865" id="Path" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"></path>
+                <line x1="120.805889" y1="115.296702" x2="134.094184" y2="115.296702" id="Path" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"></line>
+                <line x1="108.949986" y1="157.652505" x2="108.949986" y2="170.9408" id="Path" stroke="#191718" stroke-width="10" stroke-linecap="round"></line>
+                <line x1="146.449986" y1="157.652505" x2="146.449986" y2="170.9408" id="Path" stroke="#191718" stroke-width="10" stroke-linecap="round"></line>
+            </g>
+        </g>
+    </g>
 </svg>
