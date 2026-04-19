@@ -16,7 +16,7 @@ No dependencies to install. This is a declarative extension with no TypeScript o
 Symlink the extension into VS Code:
 
 ```bash
-ln -s "$(pwd)" ~/.vscode/extensions/cadabra.cadabra-vscode-0.1.0
+ln -s "$(pwd)" ~/.vscode/extensions/abradb.cadabra-vscode
 ```
 
 Reload VS Code (`Cmd+Shift+P` then "Developer: Reload Window") after making changes.

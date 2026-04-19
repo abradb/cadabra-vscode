@@ -3,7 +3,7 @@
   "displayName": "Cadabra",
   "description": "Language support for Cadabra database schema files (.cadabra)",
   "version": "1.0.0",
-  "publisher": "cadabra",
+  "publisher": "abradb",
   "license": "MIT",
   "repository": {
     "type": "git",

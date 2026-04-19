@@ -57,7 +57,7 @@ table "users" {
 Search "Cadabra" in the VS Code extensions marketplace, or:
 
 ```
-ext install cadabra.cadabra-vscode
+ext install abradb.cadabra-vscode
 ```
 
 ## Build from Source
@@ -84,7 +84,7 @@ code --install-extension cadabra-vscode-*.vsix
 To iterate without re-packaging, symlink the extension into VS Code:
 
 ```bash
-ln -s "$(pwd)" ~/.vscode/extensions/cadabra.cadabra-vscode
+ln -s "$(pwd)" ~/.vscode/extensions/abradb.cadabra-vscode
 ```
 
 Reload VS Code (`Cmd+Shift+P` > "Developer: Reload Window") after making changes.
