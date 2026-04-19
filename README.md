@@ -12,21 +12,21 @@ Language support for [Cadabra](https://github.com/abradb/cadabra) database schem
 
 ## Snippets
 
-| Prefix | Description |
-|---|---|
-| `db` | Database connection block |
-| `table` | Table with id column |
-| `column` | Column definition |
-| `columnv` | Column with varchar type |
-| `columnc` | Column with comment |
-| `id` | Serial primary key |
-| `idbig` | Bigint identity primary key |
+| Prefix    | Description                 |
+| --------- | --------------------------- |
+| `db`      | Database connection block   |
+| `table`   | Table with id column        |
+| `column`  | Column definition           |
+| `columnv` | Column with varchar type    |
+| `columnc` | Column with comment         |
+| `id`      | Serial primary key          |
+| `idbig`   | Bigint identity primary key |
 | `created` | created_at timestamp column |
 | `updated` | updated_at timestamp column |
-| `index` | Index definition |
-| `fk` | Foreign key constraint |
-| `enum` | Enum type |
-| `check` | Check constraint |
+| `index`   | Index definition            |
+| `fk`      | Foreign key constraint      |
+| `enum`    | Enum type                   |
+| `check`   | Check constraint            |
 
 ## Example
 
@@ -44,7 +44,6 @@ table "users" {
     type        = serial
     primary_key = true
   }
-
   column "email" {
     type     = "varchar(255)"
     not_null = true
@@ -60,6 +59,35 @@ Search "Cadabra" in the VS Code extensions marketplace, or:
 ```
 ext install cadabra.cadabra-vscode
 ```
+
+## Build from Source
+
+Requires Node.js 16+.
+
+```bash
+# Clone the repo
+git clone https://github.com/abradb/cadabra-vscode.git
+cd cadabra-vscode
+
+# Install vsce (VS Code Extension CLI)
+npm install -g @vscode/vsce
+
+# Package the extension
+vsce package
+
+# Install locally (use the generated .vsix filename)
+code --install-extension cadabra-vscode-*.vsix
+```
+
+### Development
+
+To iterate without re-packaging, symlink the extension into VS Code:
+
+```bash
+ln -s "$(pwd)" ~/.vscode/extensions/cadabra.cadabra-vscode
+```
+
+Reload VS Code (`Cmd+Shift+P` > "Developer: Reload Window") after making changes.
 
 ## Links
 
